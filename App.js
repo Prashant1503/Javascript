@@ -14,6 +14,9 @@ import Profile from './components/Profile';
 
 const {width, height} = Dimensions.get('screen');
 
+const data = {
+  name: 'Prashant vani',
+};
 const App = props => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -21,7 +24,7 @@ const App = props => {
       <Button
         title="Visit profile page"
         onPress={() => {
-          props.navigation.navigate('Profile');
+          props.navigation.navigate('Profile', {name: 'Prashant'});
         }}
       />
     </View>

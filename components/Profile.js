@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 
-export default class Profile extends Component {
-  render() {
-    return (
-      <View>
-        <Text> Welcome,to profile Component </Text>
-      </View>
-    );
-  }
-}
+const Profile = props => {
+  const {state} = props.navigation;
+
+  return (
+    <View>
+      <Text>Hey,I am {state.params.name} </Text>
+    </View>
+  );
+};
+
+export default Profile;
